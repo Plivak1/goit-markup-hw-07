@@ -1,0 +1,41 @@
+.clients {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: var(--color_without_guidance);
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    background-color: var(--white_color);
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: border var(--transition);
+    &:hover,
+    &:focus {
+      border-color: var(--hover_style);
+    }
+    &:hover .clients__icon,
+    &:focus .clients__icon {
+      fill: var(--hover_style);
+    }
+  }
+  &__icon {
+    fill: #afb1b8;
+    transition: fill var(--transition);
+  }
+}
